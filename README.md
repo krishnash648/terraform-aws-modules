@@ -1,100 +1,184 @@
-🚀 Terraform AWS Infrastructure Modules
+# 🚀 Terraform AWS Infrastructure Modules
 
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-as--Code-green)
 
+![Architecture Diagram](assets/architecture.png)
 
+This project demonstrates **Infrastructure as Code (IaC)** using **Terraform** to provision AWS infrastructure with a **modular architecture**.
 
+The infrastructure includes networking, compute, storage, and database modules that can be reused across environments.
 
+---
 
+# 🌐 Infrastructure Overview
 
+The project provisions AWS resources using reusable Terraform modules.
 
-📌 Project Overview
+Provisioned components include:
 
-This project demonstrates Infrastructure as Code (IaC) using Terraform to provision AWS cloud resources with a modular architecture.
+- VPC networking
+- Public and private subnets
+- EC2 compute instance
+- RDS database module
+- S3 storage bucket
 
-The infrastructure is designed using reusable Terraform modules to make it scalable, maintainable, and production-ready.
+This project demonstrates how infrastructure can be **automated, version controlled, and deployed consistently using Terraform.**
 
-Provisioned resources include:
+---
 
-VPC networking
+## 📸 Infrastructure Preview
 
-EC2 compute instance
+### Terraform Execution
 
-RDS database module
+![Terraform Plan](assets/terraform-plan.png)
 
-S3 storage bucket
+Terraform successfully creating AWS resources using reusable modules.
 
-The project showcases how infrastructure can be automated and version-controlled using Terraform.
+---
 
-🧰 Tech Stack
+### EC2 Instance
+
+![EC2 Screenshot](assets/ec2.png)
+
+EC2 instance provisioned in the public subnet using Terraform.
+
+---
+
+# 🧰 Tech Stack
+
+* Terraform
+* AWS
+* EC2
+* RDS
+* S3
+* VPC
+* Git
+* GitHub
+
+---
+
+# 🏗 Architecture
+
+The infrastructure follows a **modular Terraform architecture**.
+
+### Infrastructure Flow
+
 
 Terraform
+↓
+AWS Cloud Infrastructure
+↓
+VPC Network
+├── Public Subnet
+│ └── EC2 Instance
+│
+├── Private Subnet
+│ └── RDS Database
+│
+└── S3 Bucket
 
-AWS
 
-EC2
+### Architecture Components
 
-RDS
+**Terraform Modules**
 
-S3
+Reusable modules are used to organize infrastructure code and promote maintainability.
 
-VPC
+**VPC**
 
-Git
+Creates the network environment including subnets and routing.
 
-GitHub
+**EC2 Instance**
 
-🏗 Architecture
+Compute instance deployed in the public subnet.
 
-The infrastructure is deployed using Terraform modules on AWS.
+**RDS Database**
 
-📂 Project Structure
+Managed relational database deployed in the private subnet.
+
+**S3 Bucket**
+
+Object storage bucket for storing application or infrastructure data.
+
+---
+
+# 📂 Project Structure
+
+
 terraform-aws-modules
 │
 ├── modules
-│   ├── vpc
-│   ├── ec2
-│   ├── rds
-│   └── s3
+│ ├── vpc
+│ ├── ec2
+│ ├── rds
+│ └── s3
 │
 ├── environments
-│   └── dev
-│       ├── main.tf
-│       ├── provider.tf
-│       └── terraform.tfvars
+│ └── dev
+│ ├── main.tf
+│ ├── provider.tf
+│ └── terraform.tfvars
 │
 ├── assets
-│   ├── architecture.png
-│   ├── ec2.png
-│   └── terraform-plan.png
+│ ├── architecture.png
+│ ├── ec2.png
+│ └── terraform-plan.png
 │
 ├── .gitignore
 └── README.md
-🚀 Infrastructure Deployment
 
-Terraform is used to provision infrastructure.
 
-Initialize Terraform
+---
+
+# ⚙ Infrastructure Deployment
+
+### 1️⃣ Initialize Terraform
+
+```bash
 terraform init
-Preview Infrastructure Changes
+2️⃣ Preview Infrastructure Changes
 terraform plan
-
-Example output:
-
-Apply Infrastructure
+3️⃣ Deploy Infrastructure
 terraform apply
 
-Terraform will create the AWS infrastructure defined in the modules.
+Terraform will create the AWS infrastructure defined in the Terraform modules.
 
-🖥 EC2 Instance
-
-EC2 instance created successfully using Terraform.
-
-🧹 Destroy Infrastructure
-
-To remove all created AWS resources:
-
+4️⃣ Destroy Infrastructure
 terraform destroy
-👨‍💻 Author
+
+This command removes all created AWS resources.
+
+📊 Features
+
+Modular Terraform architecture
+
+Infrastructure as Code using Terraform
+
+AWS cloud resource provisioning
+
+Reusable Terraform modules
+
+Version controlled infrastructure
+
+Environment-based deployment structure
+
+🔮 Future Improvements
+
+Remote Terraform state using S3
+
+State locking using DynamoDB
+
+CI/CD pipeline for Terraform deployment
+
+Multi-environment support (dev/staging/prod)
+
+👩‍💻 Author
 
 Krishna
-DevOps & Cloud Enthusiast
+
+GitHub
+https://github.com/krishnash648
+
+⭐ If you found this project useful, consider giving it a star.
