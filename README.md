@@ -186,11 +186,11 @@ This command removes all created AWS resources.
 
 # 👩‍💻 Author
 
-**Krishna**
+**Krishna Sharma**
 
-GitHub  
+GitHub
 https://github.com/krishnash648
 
 ---
 
-⭐ If you found this project useful, consider giving it a star.
+# ⭐ If you found this project useful, consider giving it a star.
