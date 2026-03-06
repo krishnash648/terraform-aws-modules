@@ -48,14 +48,14 @@ EC2 instance provisioned in the public subnet using Terraform.
 
 # 🧰 Tech Stack
 
-* Terraform
-* AWS
-* EC2
-* RDS
-* S3
-* VPC
-* Git
-* GitHub
+* Terraform  
+* AWS  
+* EC2  
+* RDS  
+* S3  
+* VPC  
+* Git  
+* GitHub  
 
 ---
 
@@ -65,25 +65,26 @@ The infrastructure follows a **modular Terraform architecture**.
 
 ### Infrastructure Flow
 
-
+```
 Terraform
-↓
+   ↓
 AWS Cloud Infrastructure
-↓
+   ↓
 VPC Network
-├── Public Subnet
-│ └── EC2 Instance
-│
-├── Private Subnet
-│ └── RDS Database
-│
-└── S3 Bucket
+   ├── Public Subnet
+   │      └── EC2 Instance
+   │
+   ├── Private Subnet
+   │      └── RDS Database
+   │
+   └── S3 Bucket
+```
 
 ### Architecture Components
 
 **Terraform Modules**
 
-Reusable modules are used to organize infrastructure code and promote maintainability.
+Reusable modules organize infrastructure code and improve maintainability.
 
 **VPC**
 
@@ -99,35 +100,35 @@ Managed relational database deployed in the private subnet.
 
 **S3 Bucket**
 
-Object storage bucket for storing application or infrastructure data.
+Object storage bucket used for storing application or infrastructure data.
 
 ---
 
 # 📂 Project Structure
 
-
+```
 terraform-aws-modules
 │
 ├── modules
-│ ├── vpc
-│ ├── ec2
-│ ├── rds
-│ └── s3
+│   ├── vpc
+│   ├── ec2
+│   ├── rds
+│   └── s3
 │
 ├── environments
-│ └── dev
-│ ├── main.tf
-│ ├── provider.tf
-│ └── terraform.tfvars
+│   └── dev
+│       ├── main.tf
+│       ├── provider.tf
+│       └── terraform.tfvars
 │
 ├── assets
-│ ├── architecture.png
-│ ├── ec2.png
-│ └── terraform-plan.png
+│   ├── architecture.png
+│   ├── ec2.png
+│   └── terraform-plan.png
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 
@@ -137,47 +138,59 @@ terraform-aws-modules
 
 ```bash
 terraform init
-2️⃣ Preview Infrastructure Changes
+```
+
+### 2️⃣ Preview Infrastructure Changes
+
+```bash
 terraform plan
-3️⃣ Deploy Infrastructure
+```
+
+### 3️⃣ Deploy Infrastructure
+
+```bash
 terraform apply
+```
 
 Terraform will create the AWS infrastructure defined in the Terraform modules.
 
-4️⃣ Destroy Infrastructure
+### 4️⃣ Destroy Infrastructure
+
+```bash
 terraform destroy
+```
 
 This command removes all created AWS resources.
 
-📊 Features
+---
 
-Modular Terraform architecture
+# 📊 Features
 
-Infrastructure as Code using Terraform
+- Modular Terraform architecture  
+- Infrastructure as Code using Terraform  
+- AWS cloud resource provisioning  
+- Reusable Terraform modules  
+- Version controlled infrastructure  
+- Environment-based deployment structure  
 
-AWS cloud resource provisioning
+---
 
-Reusable Terraform modules
+# 🔮 Future Improvements
 
-Version controlled infrastructure
+- Remote Terraform state using S3  
+- State locking using DynamoDB  
+- CI/CD pipeline for Terraform deployment  
+- Multi-environment support (dev / staging / prod)
 
-Environment-based deployment structure
+---
 
-🔮 Future Improvements
+# 👩‍💻 Author
 
-Remote Terraform state using S3
+**Krishna**
 
-State locking using DynamoDB
-
-CI/CD pipeline for Terraform deployment
-
-Multi-environment support (dev/staging/prod)
-
-👩‍💻 Author
-
-Krishna
-
-GitHub
+GitHub  
 https://github.com/krishnash648
+
+---
 
 ⭐ If you found this project useful, consider giving it a star.
