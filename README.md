@@ -79,7 +79,6 @@ VPC Network
 │
 └── S3 Bucket
 
-
 ### Architecture Components
 
 **Terraform Modules**
